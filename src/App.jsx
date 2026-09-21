@@ -5,12 +5,14 @@ import Features from './components/Features';
 import Services from './components/Services';
 import SplitSection from './components/SplitSection';
 import Gallery from './components/Gallery';
+import Moments from './components/Moments';
 import About from './components/About';
 import News from './components/News';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
+import ScrollReveal from './components/ScrollReveal';
 
 function App() {
   return (
@@ -18,30 +20,33 @@ function App() {
       <Nav />
       <main id="main">
         <Hero />
-        <Stats />
-        <Features />
-        <Services />
-        <About />
-        <SplitSection
-          image="/images/gallery-01.jpg?v=20260919205610"
-          imageAlt="Doctor consultation at Dr. Shabnam's clinic"
-          title="Precision Care for Every Patient"
-          variant="cream"
-          cta="Book a Consultation"
-          ctaHref="#contact"
-          ctaIcon="fa-regular fa-calendar-check"
-        >
-          <p>
-            Every pregnancy, every fertility journey, and every gynaecological concern deserves individual attention. Our team combines advanced medical expertise with genuine compassion.
-          </p>
-          <p>
-            From routine checkups to complex IVF procedures, we are committed to helping you achieve the best possible outcomes.
-          </p>
-        </SplitSection>
-        <Gallery />
-        <Testimonials />
-        <News />
-        <Contact />
+        <ScrollReveal><Stats /></ScrollReveal>
+        <ScrollReveal><Features /></ScrollReveal>
+        <ScrollReveal><Services /></ScrollReveal>
+        <ScrollReveal><About /></ScrollReveal>
+        <ScrollReveal>
+          <SplitSection
+            image="/images/gallery-01.jpg?v=20260919205610"
+            imageAlt="Doctor consultation at Dr. Shabnam's clinic"
+            title="Precision Care for Every Patient"
+            variant="cream"
+            cta="Book a Consultation"
+            ctaHref="#contact"
+            ctaIcon="fa-regular fa-calendar-check"
+          >
+            <p>
+              Every pregnancy, every fertility journey, and every gynaecological concern deserves individual attention. Our team combines advanced medical expertise with genuine compassion.
+            </p>
+            <p>
+              From routine checkups to complex IVF procedures, we are committed to helping you achieve the best possible outcomes.
+            </p>
+          </SplitSection>
+        </ScrollReveal>
+        <ScrollReveal><Gallery /></ScrollReveal>
+        <ScrollReveal><Moments /></ScrollReveal>
+        <ScrollReveal><Testimonials /></ScrollReveal>
+        <ScrollReveal><News /></ScrollReveal>
+        <ScrollReveal><Contact /></ScrollReveal>
       </main>
       <Footer />
       <a

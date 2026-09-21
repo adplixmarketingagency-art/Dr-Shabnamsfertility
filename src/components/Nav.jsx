@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { smoothScrollTo } from '../utils/smoothScroll';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,9 @@ function Nav() {
     { href: '#contact', label: 'Contact' },
   ];
 
-  const handleNavClick = () => {
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    smoothScrollTo(href);
     setIsOpen(false);
     document.body.style.overflow = '';
   };
@@ -28,7 +31,7 @@ function Nav() {
   return (
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`} role="navigation" aria-label="Main navigation">
       <div className="nav-inner">
-        <a href="#home" className="nav-logo">
+        <a href="#home" className="nav-logo" onClick={(e) => handleNavClick(e, '#home')}>
           <img src="/images/logo-round.jpg?v=20260919205610" alt="Dr. Shabnam's logo" />
           Dr.Shabnam's
         </a>
@@ -48,7 +51,7 @@ function Nav() {
         </button>
         <div className={`nav-menu ${isOpen ? 'active' : ''}`} id="navMenu" role="menubar">
           {navLinks.map(link => (
-            <a key={link.href} href={link.href} role="menuitem" onClick={handleNavClick}>
+            <a key={link.href} href={link.href} role="menuitem" onClick={(e) => handleNavClick(e, link.href)}>
               {link.label}
             </a>
           ))}

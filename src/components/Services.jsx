@@ -5,7 +5,7 @@ function Services() {
     { icon: 'fa-solid fa-microscope', title: 'Laparoscopy', desc: 'Key-hole surgery for endometriosis, fibroids, and ovarian cysts — smaller incisions, faster recovery.' },
     { icon: 'fa-solid fa-magnifying-glass', title: 'Hysteroscopy', desc: 'Minimally invasive examination of the uterine cavity for polyps, fibroids, and structural abnormalities.' },
     { icon: 'fa-solid fa-heart', title: 'Antenatal Care', desc: 'Tailormade protocols for IVF-conceived and natural pregnancies, ensuring the best maternal and neonatal outcomes.' },
-    { icon: 'fa-solid fa-scalpel', title: 'Hysterectomy', desc: 'Laparoscopic and vaginal hysterectomy for fibroids, bleeding disorders, and precancerous conditions — day-care options available.' },
+    { icon: 'fa-solid fa-procedures', title: 'Hysterectomy', desc: 'Laparoscopic and vaginal hysterectomy for fibroids, bleeding disorders, and precancerous conditions — day-care options available.' },
     { icon: 'fa-solid fa-user-doctor', title: 'Male Fertility Clinic', desc: 'Comprehensive evaluation and treatment of male factor infertility, including semen analysis and reproductive counselling.' },
     { icon: 'fa-solid fa-dna', title: 'Assisted Conception', desc: 'Natural conception support, fertility-enhancing surgeries, and advanced reproductive technologies.' },
     { icon: 'fa-solid fa-spa', title: 'Cosmetic Gynaecology', desc: 'Hymenoplasty, vaginoplasty, labiaplasty, and monsplasty — performed with discretion and clinical excellence.' },

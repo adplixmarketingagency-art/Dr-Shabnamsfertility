@@ -13,7 +13,7 @@ function About() {
       <div className="container">
         <div className="split-section">
           <div className="split-section-visual">
-            <img src="/images/IMG_0989.JPG" alt="Dr. Shabnam Khan consulting with a patient at her fertility clinic" loading="lazy" />
+            <img src="/images/Dr_Shabnam.png" alt="Dr. Shabnam Khan consulting with a patient at her fertility clinic" loading="lazy" />
             <div className="about-experience">
               <div className="about-number">15+</div>
               <div className="about-label">Years of<br />Experience</div>
@@ -35,6 +35,14 @@ function About() {
             <a href="#contact" className="btn btn-primary">
               <i className="fa-regular fa-calendar-check"></i> Book a Consultation
             </a>
+            <div className="about-social">
+              <a href="https://www.instagram.com/dr.shabnam_fertility?stkn=MWdrenF4cHRneXFpcA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com/@dr.shabnam_fertility?si=l3-ms20OfDayoEwh" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i className="fa-brands fa-youtube"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>

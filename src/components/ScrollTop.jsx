@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { smoothScrollTo } from '../utils/smoothScroll';
 
 function ScrollTop() {
   const [visible, setVisible] = useState(false);
@@ -12,7 +13,7 @@ function ScrollTop() {
   return (
     <button
       className={`scroll-top ${visible ? 'visible' : ''}`}
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      onClick={() => smoothScrollTo('#home')}
       aria-label="Scroll to top"
     >
       <i className="fa-solid fa-arrow-up"></i>

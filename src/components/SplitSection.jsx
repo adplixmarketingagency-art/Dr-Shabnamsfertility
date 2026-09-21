@@ -1,7 +1,7 @@
 function SplitSection({ image, imageAlt, title, children, variant = 'cream', cta, ctaHref, ctaIcon }) {
   return (
     <section className={`split-section ${variant === 'crimson' ? 'split-crimson' : 'split-cream'}`}>
-      <div className="split-section-visual">
+      <div className="split-section-visual reveal-image">
         <img src={image} alt={imageAlt} loading="lazy" />
       </div>
       <div className="split-section-content">
