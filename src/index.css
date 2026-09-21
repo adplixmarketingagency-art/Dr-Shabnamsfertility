@@ -752,6 +752,126 @@ textarea:focus-visible {
   }
 }
 
+/* ===== News ===== */
+.news { background: var(--white); }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 640px) {
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .news-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.news-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.news-card:hover {
+  border-color: var(--accent-soft);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.news-source {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.news-image {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 16px;
+  aspect-ratio: 16 / 9;
+  background: var(--accent-tint);
+}
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.news-desc {
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.news-date {
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.02em;
+}
+
+/* Loading skeleton */
+.news-skeleton {
+  height: 12px;
+  background: var(--line);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+  animation: skeleton-loading 1.5s infinite;
+}
+.news-skeleton-title {
+  height: 18px;
+  width: 80%;
+}
+.news-skeleton-text {
+  width: 60%;
+}
+
+/* Error state */
+.news-error {
+  text-align: center;
+  padding: 48px 24px;
+}
+.news-error p {
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.news-error-detail {
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+}
+.news-error-hint {
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+.news-error-hint a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 /* ===== Timeline (Gallery) =====
    Desktop: a tall section — a swirled thread with big loops runs through the
    middle; milestone cards cluster along it.

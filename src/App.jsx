@@ -6,8 +6,8 @@ import Services from './components/Services';
 import SplitSection from './components/SplitSection';
 import Gallery from './components/Gallery';
 import About from './components/About';
+import News from './components/News';
 import Testimonials from './components/Testimonials';
-import LogoCloud from './components/LogoCloud';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
@@ -40,7 +40,7 @@ function App() {
         </SplitSection>
         <Gallery />
         <Testimonials />
-        <LogoCloud />
+        <News />
         <Contact />
       </main>
       <Footer />

@@ -13,9 +13,10 @@ function Nav() {
   const navLinks = [
     { href: '#home', label: 'Home' },
     { href: '#services', label: 'Services' },
-    { href: '#gallery', label: 'Gallery' },
     { href: '#about', label: 'Doctor' },
+    { href: '#gallery', label: 'Gallery' },
     { href: '#testimonials', label: 'Reviews' },
+    { href: '#news', label: 'News' },
     { href: '#contact', label: 'Contact' },
   ];
 
