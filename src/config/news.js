@@ -3,7 +3,7 @@
  * Uses NewsAPI.org (free tier: 100 requests/day).
  * Get your API key at https://newsapi.org/register
  */
-const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY || '';
+const NEWS_API_KEY = import.meta.env.ITE_NEWS_API_KEY || '';
 
 /**
  * Fetch fertility/health news from NewsAPI.
