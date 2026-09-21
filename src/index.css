@@ -198,7 +198,7 @@ textarea:focus-visible {
   z-index: 1000;
   width: calc(100% - 16px);
   max-width: 900px;
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(24px) saturate(1.4);
   -webkit-backdrop-filter: blur(24px) saturate(1.4);
   border-radius: var(--radius-full);
@@ -211,7 +211,7 @@ textarea:focus-visible {
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 24px rgba(26, 37, 51, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.4);
 }
