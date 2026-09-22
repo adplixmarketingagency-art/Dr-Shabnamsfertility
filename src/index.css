@@ -198,7 +198,7 @@ textarea:focus-visible {
   z-index: 1000;
   width: calc(100% - 16px);
   max-width: 900px;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(24px) saturate(1.4);
   -webkit-backdrop-filter: blur(24px) saturate(1.4);
   border-radius: var(--radius-full);

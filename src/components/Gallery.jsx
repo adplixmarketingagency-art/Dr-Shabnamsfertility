@@ -13,7 +13,7 @@ function Gallery() {
     { year: 2021, image: '/images/gallery-06.jpg', alt: 'Clinic milestone 2021' },
     { year: 2023, image: '/images/gallery-07.jpg', alt: 'Clinic milestone 2023' },
     { year: 2025, image: '/images/gallery-08.jpg', alt: 'Clinic milestone 2025' },
-    { year: 2026, image: '/images/gallery-01.jpg', alt: 'Clinic milestone 2026' },
+    { year: 2026, image: '/images/13.png', alt: 'Clinic milestone 2026' },
   ];
 
   /** Scattered positions (top/left %) across the background image. */
