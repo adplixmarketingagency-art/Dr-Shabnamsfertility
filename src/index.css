@@ -199,12 +199,12 @@ textarea:focus-visible {
   z-index: 1000;
   width: calc(100% - 16px);
   max-width: 900px;
-  background: rgb(255, 255, 255);
-  backdrop-filter: blur(24px) saturate(1.4);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
   border-radius: var(--radius-full);
   box-shadow: 0 1px 2px rgba(26, 37, 51, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 @media (min-width: 768px) {
@@ -212,9 +212,9 @@ textarea:focus-visible {
 }
 
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 4px 24px rgba(26, 37, 51, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .nav-inner {
@@ -322,6 +322,12 @@ textarea:focus-visible {
     height: auto;
     background: transparent;
     backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-height: none;
+    overflow-y: visible;
     flex-direction: row;
     padding: 0;
     opacity: 1;
