@@ -27,6 +27,7 @@
   /* Radius — restrained, purposeful */
   --radius-sm: 6px;
   --radius-md: 12px;
+  --radius-lg: 18px;
   --radius-full: 9999px;
 
   /* Shadow — minimal, only where depth matters */
@@ -221,6 +222,7 @@ textarea:focus-visible {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  position: relative;
 }
 
 .nav-logo {
@@ -264,31 +266,37 @@ textarea:focus-visible {
 .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 .nav-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  background: rgba(244, 239, 230, 0.995);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 16px;
+  right: 16px;
+  width: auto;
+  height: auto;
+  max-height: calc(100vh - 100px);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(28px) saturate(1.6);
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 16px 48px rgba(26, 37, 51, 0.14), 0 2px 8px rgba(26, 37, 51, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 80px 24px;
+  justify-content: flex-start;
+  gap: 2px;
+  padding: 16px 20px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px);
+  transform: translateY(-8px) scale(0.97);
   transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
   z-index: 999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .nav-menu.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .nav-menu a {
@@ -575,6 +583,9 @@ textarea:focus-visible {
 
 /* ===== Services ===== */
 .services { background: var(--paper); }
+
+/* ===== About (Doctor) ===== */
+.about { background: var(--paper-deep); }
 
 .services-grid {
   display: grid;
@@ -867,7 +878,7 @@ textarea:focus-visible {
     position: absolute;
     top: 24px;
     bottom: 24px;
-    left: 20px;
+    left: 48px;
     width: 3px;
     background: var(--accent-deep);
     border-radius: var(--radius-full);
@@ -879,7 +890,11 @@ textarea:focus-visible {
     width: calc(100% - 56px);
     margin-left: 56px;
     margin-bottom: 32px;
-    padding: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     left: auto !important;
     top: auto !important;
   }
@@ -887,44 +902,46 @@ textarea:focus-visible {
     margin-bottom: 0;
   }
 
-  /* Year label alternates sides of the image */
-  /* Odd cards: year on the LEFT (between line and image) */
-  .gallery-card:nth-of-type(odd) .gallery-card-year {
-    display: inline-block;
-    font-family: var(--font-serif);
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--accent-deep);
-    text-align: center;
-    width: 40px;
-    flex-shrink: 0;
-    margin-bottom: 0;
-  }
-  .gallery-card:nth-of-type(odd) .gallery-card-image {
-    width: calc(100% - 48px);
-    margin-left: 48px;
-    aspect-ratio: 4 / 3;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    background: var(--accent-tint);
+  /* No hover on mobile */
+  .gallery-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-md);
   }
 
-  /* Even cards: year on the RIGHT (outside the image) */
-  .gallery-card:nth-of-type(even) .gallery-card-year {
-    display: inline-block;
+  /* Year label sits to the LEFT of the vertical line — like a real timeline */
+  .gallery-card-year {
+    position: absolute;
+    left: -68px;
+    top: 50%;
+    transform: translateY(-50%);
     font-family: var(--font-serif);
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--accent-deep);
     text-align: center;
-    width: 40px;
-    flex-shrink: 0;
-    margin-bottom: 0;
+    width: 36px;
   }
-  .gallery-card:nth-of-type(even) .gallery-card-image {
-    width: calc(100% - 48px);
+
+  /* Dot on the line at each year */
+  .gallery-card-year::before {
+    content: '';
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--paper);
+    z-index: 1;
+  }
+
+  .gallery-card-image {
+    width: 90%;
+    margin: 0 auto;
     aspect-ratio: 4 / 3;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     overflow: hidden;
     background: var(--accent-tint);
   }
@@ -933,6 +950,7 @@ textarea:focus-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
   }
 }
 
