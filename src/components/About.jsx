@@ -36,12 +36,24 @@ function About() {
               <i className="fa-regular fa-calendar-check"></i> Book a Consultation
             </a>
             <div className="about-social">
-              <a href="https://www.instagram.com/dr.shabnam_fertility?stkn=MWdrenF4cHRneXFpcA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i className="fa-brands fa-instagram"></i>
-              </a>
-              <a href="https://youtube.com/@dr.shabnam_fertility?si=l3-ms20OfDayoEwh" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <i className="fa-brands fa-youtube"></i>
-              </a>
+              <div className="about-social-row">
+                <p>Meet Dr. Shabnam:</p>
+                <a href="https://www.instagram.com/dr.shabnam_fertility?stkn=MWdrenF4cHRneXFpcA==" target="_blank" rel="noopener noreferrer" aria-label="Dr Shabnam Instagram">
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <div className="about-social-row">
+                <p>Visit our clinic:</p>
+                <a href="https://www.instagram.com/dr.shabnams_fertility_center?stkn=MTc3M3NxbDl1bDVw" target="_blank" rel="noopener noreferrer" aria-label="Clinic Instagram">
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <div className="about-social-row">
+                <p>Watch on YouTube:</p>
+                <a href="https://youtube.com/@dr.shabnam_fertility?si=l3-ms20OfDayoEwh" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <i className="fa-brands fa-youtube"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>

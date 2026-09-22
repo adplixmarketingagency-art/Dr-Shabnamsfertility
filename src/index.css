@@ -643,6 +643,7 @@ textarea:focus-visible {
   min-height: 420px;
   overflow: hidden;
   position: relative;
+  max-width: 100%;
 }
 .split-section-visual img {
   width: 100%;
@@ -722,8 +723,14 @@ textarea:focus-visible {
 
 .about-social {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 10px;
   margin-top: 8px;
+}
+.about-social-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .about-social a {
   width: 42px;
@@ -735,12 +742,20 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   font-size: 1.05rem;
+  flex-shrink: 0;
   transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 .about-social a:hover {
   background: var(--accent);
   color: var(--white);
   transform: translateY(-2px);
+}
+.about-social p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  line-height: 1;
+  margin: 0;
 }
 .about-list li {
   display: flex;
