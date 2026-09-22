@@ -20,7 +20,7 @@ function Gallery() {
   const positions = [
     { top: '6%', left: '3%' }, //2011
     { top: '5%', left: '30%' }, //2013
-    { top: '-1%', left: '62%' }, //2015
+    { top: '1%', left: '62%' }, //2015
     //{ top: '16%', left: '71%' },
     { top: '19%', left: '81%' }, //2017
     { top: '36%', left: '51%' }, //2019

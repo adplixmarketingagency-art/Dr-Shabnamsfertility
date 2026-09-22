@@ -5,8 +5,7 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#home" className="nav-logo">
-              <img src="/images/logo-round.jpg?v=20260919205610" alt="Dr. Shabnam's logo" />
-              Dr.Shabnam's Fertility & Gynec Center
+              <img src="/images/sfgc-logo.png" alt="Dr. Shabnam's Fertility & Gynec Centre" />
             </a>
             <p>Compassionate gynaecology and fertility care for the people of Pondicherry and beyond. Your journey to parenthood begins here.</p>
           </div>

@@ -22,7 +22,7 @@ function Hero() {
           </div>
           <div className="hero-visual">
             <div className="hero-image-wrapper">
-              <img src="/images/banner.jpg?v=20260919205610" alt="Dr. Shabnam's Fertility & Gynec Centre — modern clinic facility" loading="eager" />
+              <img src="/images/mobile-portrait.png" alt="Dr. Shabnam" loading="eager" />
             </div>
           </div>
         </div>

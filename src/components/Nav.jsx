@@ -32,8 +32,7 @@ function Nav() {
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`} role="navigation" aria-label="Main navigation">
       <div className="nav-inner">
         <a href="#home" className="nav-logo" onClick={(e) => handleNavClick(e, '#home')}>
-          <img src="/images/logo-round.jpg?v=20260919205610" alt="Dr. Shabnam's logo" />
-          Dr.Shabnam's
+          <img src="/images/sfgc-logo.png" alt="Dr. Shabnam's Fertility & Gynec Centre" />
         </a>
         <button
           className={`nav-toggle ${isOpen ? 'active' : ''}`}
