@@ -856,17 +856,83 @@ textarea:focus-visible {
 @media (max-width: 767px) {
   .gallery-stage {
     min-height: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 16px;
+    display: block;
+    padding: 24px 16px;
   }
   .gallery-bg { display: none; }
+
+  /* Central branch line — runs down the middle in --accent-deep */
+  .gallery-stage::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: 20px;
+    width: 3px;
+    background: var(--accent-deep);
+    border-radius: var(--radius-full);
+    z-index: 0;
+  }
+
   .gallery-card {
     position: relative;
-    width: 100%;
-    top: auto !important;
+    width: calc(100% - 56px);
+    margin-left: 56px;
+    margin-bottom: 32px;
+    padding: 10px;
     left: auto !important;
+    top: auto !important;
+  }
+  .gallery-card:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Year label alternates sides of the image */
+  /* Odd cards: year on the LEFT (between line and image) */
+  .gallery-card:nth-of-type(odd) .gallery-card-year {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-align: center;
+    width: 40px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+  .gallery-card:nth-of-type(odd) .gallery-card-image {
+    width: calc(100% - 48px);
+    margin-left: 48px;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--accent-tint);
+  }
+
+  /* Even cards: year on the RIGHT (outside the image) */
+  .gallery-card:nth-of-type(even) .gallery-card-year {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-align: center;
+    width: 40px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+  .gallery-card:nth-of-type(even) .gallery-card-image {
+    width: calc(100% - 48px);
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--accent-tint);
+  }
+
+  .gallery-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
