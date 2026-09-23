@@ -127,10 +127,10 @@ function Moments() {
                     loading={trackIdx === 0 && i < 4 ? 'eager' : 'lazy'}
                   />
                   <div className="moment-card-overlay">
-                    <span className="moment-card-badge">
+                    {/* <span className="moment-card-badge">
                       <i className="fa-solid fa-heart"></i>
                       <span>Precious Moment</span>
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               ))}
