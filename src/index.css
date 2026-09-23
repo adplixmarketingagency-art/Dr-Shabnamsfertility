@@ -1082,44 +1082,368 @@ textarea:focus-visible {
   text-decoration: underline;
 }
 
-/* ===== Happy Moments ===== */
-.moments { background: var(--white); }
+/* ===== Happy Moments Marquee ===== */
+.moments {
+  background: var(--white);
+  overflow: hidden;
+}
 
-.moments-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+.moments-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 16px 0 24px;
 }
-@media (min-width: 640px) {
-  .moments-grid { grid-template-columns: repeat(3, 1fr); }
+
+.moments-marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
 }
-@media (min-width: 1024px) {
-  .moments-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.moments-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
+  flex-shrink: 0;
+  will-change: transform;
+  animation: momentsScroll 45s linear infinite;
+}
+
+.moments-marquee:hover .moments-track,
+.moments-marquee.is-paused .moments-track {
+  animation-play-state: paused;
+}
+
+@keyframes momentsScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .moment-card {
-  border-radius: var(--radius-md);
+  position: relative;
+  height: 400px;
+  aspect-ratio: 9 / 16;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: var(--accent-tint);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  background: var(--paper-deep);
+  box-shadow: 0 8px 24px rgba(26, 37, 51, 0.08);
+  border: 1px solid rgba(229, 221, 208, 0.85);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.3s ease;
 }
-.moments-zoom .moment-card img {
-  transform: scale(1.03);
-}
-.moment-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-.moment-card:hover img {
-  transform: scale(1.08);
-}
+
 .moment-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.moment-card:hover,
+.moment-card:focus-visible {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 42px -10px rgba(216, 82, 122, 0.28), 0 6px 16px rgba(26, 37, 51, 0.1);
+  border-color: rgba(216, 82, 122, 0.45);
+}
+
+.moment-card:hover img,
+.moment-card:focus-visible img {
+  transform: scale(1.06);
+}
+
+.moment-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  background: linear-gradient(180deg, transparent 55%, rgba(26, 37, 51, 0.72) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.moment-card:hover .moment-card-overlay,
+.moment-card:focus-visible .moment-card-overlay {
+  opacity: 1;
+}
+
+.moment-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(6px);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.moment-card:hover .moment-card-badge,
+.moment-card:focus-visible .moment-card-badge {
+  transform: translateY(0);
+}
+
+/* Bottom Controls */
+.moments-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.moments-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.moments-toggle-btn:hover {
+  background: var(--accent-tint);
+  border-color: var(--accent);
+  color: var(--accent-deep);
+}
+
+.moments-controls-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--ink-mute);
+}
+
+.moments-controls-hint i {
+  color: var(--accent);
+}
+
+/* Lightbox Modal */
+.moments-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 999999;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: momentsFadeIn 0.25s ease-out;
+  box-sizing: border-box;
+}
+
+@keyframes momentsFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.moments-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  max-height: 90dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  animation: momentsZoomIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes momentsZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.moments-modal-image-wrapper {
+  position: relative;
+  max-height: 82vh;
+  max-height: 82dvh;
+  max-width: calc(100vw - 160px);
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moments-modal-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.moments-modal-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.moments-modal-close:hover {
+  background: var(--accent);
+  transform: rotate(90deg);
+}
+
+.moments-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background: rgba(26, 37, 51, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.moments-modal-nav:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.moments-modal-nav.prev {
+  left: -64px;
+}
+
+.moments-modal-nav.next {
+  right: -64px;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 1280px) {
+  .moment-card {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .moment-card {
+    height: 330px;
+    border-radius: var(--radius-md);
+  }
+  .moments-track {
+    gap: 16px;
+    padding-right: 16px;
+    animation-duration: 35s;
+  }
+  .moments-modal-nav.prev {
+    left: 6px;
+  }
+  .moments-modal-nav.next {
+    right: 6px;
+  }
+  .moments-modal-close {
+    top: -42px;
+    right: 4px;
+  }
+  .moments-modal-image-wrapper {
+    max-height: 68vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .moment-card {
+    height: 290px;
+  }
+  .moments-marquee {
+    mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+  }
+  .moments-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moments-track {
+    animation: none;
+  }
+  .moments-marquee {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    mask-image: none;
+    -webkit-mask-image: none;
+    padding-bottom: 20px;
+  }
+  .moment-card {
+    scroll-snap-align: center;
+  }
 }
 
 /* ===== Timeline (Gallery) =====
