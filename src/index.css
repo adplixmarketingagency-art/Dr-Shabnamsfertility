@@ -1115,9 +1115,37 @@ textarea:focus-visible {
   animation: momentsScroll 45s linear infinite;
 }
 
-.moments-marquee:hover .moments-track,
 .moments-marquee.is-paused .moments-track {
   animation-play-state: paused;
+}
+
+/* Pause on hover only on devices with pointer/mouse, never on mobile touch */
+@media (hover: hover) and (pointer: fine) {
+  .moments-marquee:hover .moments-track {
+    animation-play-state: paused;
+  }
+
+  .moment-card:hover,
+  .moment-card:focus-visible {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 42px -10px rgba(216, 82, 122, 0.28), 0 6px 16px rgba(26, 37, 51, 0.1);
+    border-color: rgba(216, 82, 122, 0.45);
+  }
+
+  .moment-card:hover img,
+  .moment-card:focus-visible img {
+    transform: scale(1.06);
+  }
+
+  .moment-card:hover .moment-card-overlay,
+  .moment-card:focus-visible .moment-card-overlay {
+    opacity: 1;
+  }
+
+  .moment-card:hover .moment-card-badge,
+  .moment-card:focus-visible .moment-card-badge {
+    transform: translateY(0);
+  }
 }
 
 @keyframes momentsScroll {
@@ -1154,18 +1182,6 @@ textarea:focus-visible {
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.moment-card:hover,
-.moment-card:focus-visible {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 42px -10px rgba(216, 82, 122, 0.28), 0 6px 16px rgba(26, 37, 51, 0.1);
-  border-color: rgba(216, 82, 122, 0.45);
-}
-
-.moment-card:hover img,
-.moment-card:focus-visible img {
-  transform: scale(1.06);
-}
-
 .moment-card-overlay {
   position: absolute;
   inset: 0;
@@ -1176,11 +1192,6 @@ textarea:focus-visible {
   opacity: 0;
   transition: opacity 0.35s ease;
   pointer-events: none;
-}
-
-.moment-card:hover .moment-card-overlay,
-.moment-card:focus-visible .moment-card-overlay {
-  opacity: 1;
 }
 
 .moment-card-badge {
@@ -1199,11 +1210,6 @@ textarea:focus-visible {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(6px);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.moment-card:hover .moment-card-badge,
-.moment-card:focus-visible .moment-card-badge {
-  transform: translateY(0);
 }
 
 /* Bottom Controls */
@@ -1401,24 +1407,63 @@ textarea:focus-visible {
     padding-right: 16px;
     animation-duration: 35s;
   }
-  .moments-modal-nav.prev {
-    left: 6px;
-  }
-  .moments-modal-nav.next {
-    right: 6px;
-  }
-  .moments-modal-close {
-    top: -42px;
-    right: 4px;
+  .moments-modal-backdrop {
+    padding: 16px 8px;
   }
   .moments-modal-image-wrapper {
-    max-height: 68vh;
+    max-height: 72vh;
+    max-height: 72dvh;
+    max-width: calc(100vw - 110px);
+  }
+  .moments-modal-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+    background: rgba(26, 37, 51, 0.9);
+  }
+  .moments-modal-nav.prev {
+    left: 8px;
+    right: auto;
+  }
+  .moments-modal-nav.next {
+    right: 8px;
+    left: auto;
+  }
+  .moments-modal-close {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+    background: rgba(26, 37, 51, 0.9);
   }
 }
 
 @media (max-width: 480px) {
   .moment-card {
     height: 290px;
+  }
+  .moments-modal-image-wrapper {
+    max-height: 70vh;
+    max-height: 70dvh;
+    max-width: calc(100vw - 96px);
+  }
+  .moments-modal-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+  .moments-modal-nav.prev {
+    left: 6px;
+    right: auto;
+  }
+  .moments-modal-nav.next {
+    right: 6px;
+    left: auto;
   }
   .moments-marquee {
     mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);

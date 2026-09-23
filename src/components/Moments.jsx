@@ -19,19 +19,16 @@ const MOMENT_IMAGES = [
 /**
  * Moments — "Happy Moments"
  * A continuous, smooth infinite marquee showing real patient and family moments
- * in their full natural aspect ratio (9:16 portrait), with pause-on-hover
+ * in their full natural aspect ratio (9:16 portrait), with touch-safe scrolling
  * and interactive lightbox view centered in the viewport via React Portal.
  */
 function Moments() {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
+  const [touchStartX, setTouchStartX] = useState(null);
 
   const openLightbox = (index) => {
     setSelectedIndex(index);
-    const momentsEl = document.getElementById('moments');
-    if (momentsEl) {
-      momentsEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
   };
 
   const closeLightbox = () => {
@@ -65,6 +62,23 @@ function Moments() {
       document.body.style.overflow = originalOverflow;
     };
   }, [selectedIndex, showPrev, showNext]);
+
+  // Touch swipe support inside lightbox modal
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (diff > 45) {
+      showNext();
+    } else if (diff < -45) {
+      showPrev();
+    }
+    setTouchStartX(null);
+  };
 
   // Render 3 tracks so marquee seamlessly loops across any screen size without gaps
   const tracks = [0, 1, 2];
@@ -113,10 +127,10 @@ function Moments() {
                     loading={trackIdx === 0 && i < 4 ? 'eager' : 'lazy'}
                   />
                   <div className="moment-card-overlay">
-                    {/* <span className="moment-card-badge">
+                    <span className="moment-card-badge">
                       <i className="fa-solid fa-heart"></i>
                       <span>Precious Moment</span>
-                    </span> */}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -135,10 +149,6 @@ function Moments() {
               <i className={isPaused ? 'fa-solid fa-play' : 'fa-solid fa-pause'}></i>
               <span>{isPaused ? 'Resume Scroll' : 'Pause Scroll'}</span>
             </button>
-            {/* <span className="moments-controls-hint">
-              <i className="fa-regular fa-hand-pointer"></i>
-              <span>Hover to pause · Click any photo to view full</span>
-            </span> */}
           </div>
         </div>
       </div>
@@ -154,50 +164,52 @@ function Moments() {
             aria-modal="true"
             aria-label="Expanded photo view"
           >
+            <button
+              type="button"
+              className="moments-modal-close"
+              onClick={closeLightbox}
+              aria-label="Close photo view"
+            >
+              <i className="fa-solid fa-xmark"></i>
+            </button>
+
+            <button
+              type="button"
+              className="moments-modal-nav prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                showPrev();
+              }}
+              aria-label="Previous photo"
+            >
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
+
             <div
               className="moments-modal-content"
               onClick={(e) => e.stopPropagation()}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
             >
-              <button
-                type="button"
-                className="moments-modal-close"
-                onClick={closeLightbox}
-                aria-label="Close photo view"
-              >
-                <i className="fa-solid fa-xmark"></i>
-              </button>
-
-              <button
-                type="button"
-                className="moments-modal-nav prev"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  showPrev();
-                }}
-                aria-label="Previous photo"
-              >
-                <i className="fa-solid fa-chevron-left"></i>
-              </button>
-
               <div className="moments-modal-image-wrapper">
                 <img
                   src={MOMENT_IMAGES[selectedIndex].src}
                   alt={MOMENT_IMAGES[selectedIndex].alt}
                 />
               </div>
-
-              <button
-                type="button"
-                className="moments-modal-nav next"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  showNext();
-                }}
-                aria-label="Next photo"
-              >
-                <i className="fa-solid fa-chevron-right"></i>
-              </button>
             </div>
+
+            <button
+              type="button"
+              className="moments-modal-nav next"
+              onClick={(e) => {
+                e.stopPropagation();
+                showNext();
+              }}
+              aria-label="Next photo"
+            >
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
           </div>,
           document.body
         )}
