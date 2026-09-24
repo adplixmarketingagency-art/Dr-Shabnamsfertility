@@ -531,7 +531,7 @@ textarea:focus-visible {
   max-width: 30vw;
   height: 260px;
   max-height: 30vw;
-  background-image: url('/images/floral-corner-3-clean.png');
+  background-image: url('/images/floral-corner-1.png');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
@@ -2108,7 +2108,7 @@ textarea:focus-visible {
   max-width: 26vw;
   height: 220px;
   max-height: 26vw;
-  background-image: url('/images/floral-corner-2.png');
+  background-image: url('/images/floral-corner-1.png');
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: contain;
@@ -2512,6 +2512,7 @@ textarea:focus-visible {
   gap: 32px;
   max-width: 1080px;
   margin: 0 auto;
+  align-items: stretch;
   animation: gridBubbleFade 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
@@ -2533,6 +2534,7 @@ textarea:focus-visible {
   outline: none;
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform var(--transition);
 }
 
@@ -2548,6 +2550,7 @@ textarea:focus-visible {
   position: relative;
   z-index: 2;
   margin-bottom: -1.5px; /* Pulls tab directly over body's 1.5px top border */
+  height: 42px;
 }
 
 /* Physical Folder Top Tab */
@@ -2560,6 +2563,8 @@ textarea:focus-visible {
   border-bottom: 2px solid var(--white) !important; /* Stays white to completely mask the top border */
   border-radius: 14px 14px 0 0;
   padding: 8px 22px;
+  height: 42px;
+  box-sizing: border-box;
   box-shadow: 0 -3px 8px rgba(26, 37, 51, 0.03);
   transition: border-color var(--transition);
 }
@@ -2591,15 +2596,71 @@ textarea:focus-visible {
   border-top-right-radius: var(--radius-lg);
   border-bottom-left-radius: var(--radius-lg);
   border-bottom-right-radius: var(--radius-lg);
-  padding: 30px 28px 24px;
+  padding: 28px 26px 22px;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 330px;
+  flex: 1 1 auto;
   position: relative;
   z-index: 1;
   transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.case-grid-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.case-grid-body .case-title {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  height: 5.1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.case-grid-body .case-summary {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  height: 5.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--ink-soft);
+  margin-bottom: 0;
+}
+
+.case-grid-body .case-metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.case-grid-body .case-metric-item {
+  min-width: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+}
+
+.case-grid-body .case-metric-val {
+  font-size: 0.96rem;
+  white-space: nowrap;
+}
+
+.case-grid-body .case-metric-lbl {
+  font-size: 0.68rem;
+  text-align: center;
+  line-height: 1.25;
 }
 
 /* Seamless Merge on Hover: Tab and Body connect with matching accent borders and NO divider line */
@@ -3084,6 +3145,57 @@ textarea:focus-visible {
   line-height: 1.4;
 }
 
+/* Filled Image Slot with Actual Photos */
+.case-image-slot.has-image {
+  border-style: solid;
+  border-color: var(--line-strong);
+  padding: 10px 10px 14px 10px;
+  background: var(--white);
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+.case-image-slot.has-image:hover {
+  border-color: var(--accent);
+  box-shadow: 0 14px 30px rgba(216, 82, 122, 0.16), 0 4px 12px rgba(26, 37, 51, 0.05);
+}
+
+.case-image-slot.has-image .case-image-slot-badge {
+  z-index: 2;
+  background: rgba(26, 37, 51, 0.88);
+  color: var(--white);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.case-slot-img-wrapper {
+  width: 100%;
+  height: 155px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #111;
+  position: relative;
+}
+
+.case-slot-actual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.case-image-slot:hover .case-slot-actual-img {
+  transform: scale(1.06);
+}
+
+.case-image-slot.has-image .case-image-slot-meta {
+  width: 100%;
+  text-align: left;
+  padding: 0 4px;
+}
+
 /* Dossier Footer */
 .case-folder-footer {
   margin-top: 32px;
@@ -3296,6 +3408,7 @@ textarea:focus-visible {
   /* Horizontal swipe carousel on mobile */
   .cases-folders-grid {
     display: flex;
+    align-items: stretch;
     grid-template-columns: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -3315,9 +3428,60 @@ textarea:focus-visible {
     flex: 0 0 86%;
     min-width: 280px;
     max-width: 360px;
+    align-self: stretch;
     scroll-snap-align: center;
     margin-top: 14px;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-grid-tab-bar {
+    height: 38px;
+  }
+
+  .case-grid-tab {
+    height: 38px;
+    padding: 7px 14px;
+  }
+
+  .case-grid-body {
+    flex: 1 1 auto;
+    padding: 22px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .case-grid-body .case-title {
+    font-size: 1.15rem;
+    height: 4.8rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .case-grid-body .case-summary {
+    font-size: 0.88rem;
+    height: 5.6rem;
+    line-height: 1.55;
+  }
+
+  .case-grid-body .case-metrics-bar {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding-top: 14px;
+  }
+
+  .case-grid-body .case-metric-item {
+    padding: 6px 3px;
+  }
+
+  .case-grid-body .case-metric-val {
+    font-size: 0.88rem;
+  }
+
+  .case-grid-body .case-metric-lbl {
+    font-size: 0.6rem;
   }
   .case-expanded-header {
     padding: 24px 20px;

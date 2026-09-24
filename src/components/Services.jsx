@@ -201,12 +201,12 @@ function Services() {
                   <p>{service.desc}</p>
                 </div>
 
-                <div className="service-card-huge-footer">
-                  <span className="service-card-tag">{service.highlight}</span>
+                {/* <div className="service-card-huge-footer">
+                  <span className="service-card-tag">{service.highlight}</span> 
                   <a href="#contact" className="service-card-link">
                     Enquire <span>→</span>
                   </a>
-                </div>
+                </div> */}
               </article>
             ))}
           </div>

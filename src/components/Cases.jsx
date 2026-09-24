@@ -4,61 +4,101 @@ const casesData = [
   {
     id: 'case-1',
     caseNo: 'CASE #01',
-    category: 'Fertility-Sparing Surgery',
-    title: '49 Fibroids Removed — Complete Uterine Reconstruction',
+    category: 'Fertility-Preserving Laparoscopy',
+    title: '9cm Ovarian Dermoid & Para-Ovarian Cysts Excision',
     shortDesc:
-      'A 36-year-old patient diagnosed with multiple fibroids, enlarging her uterus to the size of a 7-month pregnancy. With a courageous decision to preserve her uterus, 49 fibroids were meticulously removed and her uterus was fully reconstructed.',
-    patientAge: '36 Years Old',
+      'A 24-year-old patient presented with persistent lower abdominal and back pain. Diagnosed with a 9cm right ovarian dermoid cyst and para-ovarian cyst, both were excised via fertility-preserving laparoscopic cystectomy with 100% healthy ovarian tissue protected.',
+    patientAge: '24 Years Old',
     clinicalPresentation:
-      'Patient presented with chronic pelvic heaviness and severe uterine distension comparable to a 7-month pregnancy. Multiple imaging modalities confirmed numerous extensive myomas throughout the uterine myometrium.',
+      'A 24-year-old female presented with persistent, debilitating lower abdominal pain and chronic back pain. Comprehensive diagnostic ultrasonography and clinical workup revealed a prominent 9 cm right ovarian dermoid cyst accompanied by an adjacent right para-ovarian cyst.',
     clinicalChallenge:
-      'Due to the immense volume and quantity of fibroids, typical surgical consultations had recommended total hysterectomy (removal of the uterus). The patient’s paramount objective was uterine preservation for reproductive and psychological well-being.',
+      'Given the patient’s young age and reproductive aspirations, the paramount surgical priority was complete excision of the extensive 9 cm dermoid cyst without spillage or chemical peritonitis, while meticulously sparing healthy ovarian cortex and follicular reserve.',
     surgicalIntervention:
-      'Precision Reconstructive Myomectomy. Under expert micro-dissection and advanced haemostatic control, Dr. Shabnam and her surgical team systematically excised 49 individual fibroids of varying dimensions while carefully reconstructing the multi-layered uterine walls.',
+      'Fertility-Preserving Laparoscopic Cystectomy. Utilizing high-definition laparoscopic visualization and precision microsurgical dissection, Dr. Shabnam cleanly enucleated both the 9cm dermoid cyst and the para-ovarian cyst, carefully preserving all surrounding healthy ovarian parenchyma.',
     clinicalOutcome:
-      'Full preservation of the uterine organ with normal anatomical contour restored. Post-operative recovery was smooth and uneventful, maintaining hope for future fertility.',
+      'Successful intact cystectomy with full preservation of normal ovarian anatomy and future fertility. The patient experienced a smooth, rapid recovery and was discharged in excellent, stable condition.',
     instagramUrl:
-      'https://www.instagram.com/p/DS5KUyeE6Ym/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA%3D%3D&img_index=9',
+      'https://www.instagram.com/p/Dbm5Cydk_AA/?img_index=3&stkn=eTRpa2hrNmpqcGhs',
     stats: [
-      { label: 'Fibroids Extracted', value: '49' },
-      { label: 'Uterus Status', value: '100% Preserved' },
-      { label: 'Pre-Op Size', value: '7-Month Equiv.' },
+      { label: 'Dermoid Cyst Size', value: '9.0 cm' },
+      { label: 'Ovarian Reserve', value: '100% Protected' },
+      { label: 'Surgical Approach', value: 'Keyhole Lap.' },
     ],
     imageSlots: [
-      { id: 1, title: 'Pre-Op Clinical Scan', caption: 'Ultrasound mapping of multiple uterine myomas' },
-      { id: 2, title: 'Surgical Field', caption: 'Intra-operative precision myomectomy and reconstruction' },
-      { id: 3, title: 'Excised Fibroids', caption: 'All 49 fibroids categorized and measured' },
-      { id: 4, title: 'Post-Op Recovery', caption: 'Preserved uterine contour and healing follow-up' },
+      {
+        id: 1,
+        title: '9cm Dermoid Cyst Inspection',
+        caption: 'High-definition laparoscopic monitor view of the 9cm right ovarian dermoid cyst with probe elevation',
+        imageUrl: '/images/cases/case1-1-dermoid-cyst.jpg',
+      },
+      {
+        id: 2,
+        title: 'Bilateral Adnexal Anatomy',
+        caption: 'Panoramic endoscopic view displaying uterus, contralateral ovary, and dual cyst presentation',
+        imageUrl: '/images/cases/case1-2-pelvic-anatomy.jpg',
+      },
+      {
+        id: 3,
+        title: 'Preserved Healthy Ovarian Bed',
+        caption: 'Post-enucleation pelvic bed showing complete cyst removal with 100% healthy ovarian tissue spared',
+        imageUrl: '/images/cases/case1-3-ovarian-bed.jpg',
+      },
+      {
+        id: 4,
+        title: 'Excised Specimen Confirmation',
+        caption: 'Surgical kidney dish holding the intact 9cm excised dermoid cyst alongside the para-ovarian cyst',
+        imageUrl: '/images/cases/case1-4-excised-specimen.jpg',
+      },
     ],
   },
   {
     id: 'case-2',
     caseNo: 'CASE #02',
-    category: 'Advanced Minimally Invasive Laparoscopy',
-    title: '4kg Uterine Mass & Fibroids Removed via Keyhole Surgery',
+    category: 'Advanced Laparoscopic Myomectomy',
+    title: '10-Hour Laparoscopy: Giant 1.66kg FIGO 6–7 Fibroid & Uterine Preservation',
     shortDesc:
-      'A rare and complex clinical milestone: removal of a massive 4-kilogram uterine fibroid pathology performed entirely through advanced laparoscopic (keyhole) surgery, avoiding open abdominal incisions.',
+      'A monumental 10-hour laparoscopic milestone: complete keyhole removal of a giant 1.66 kg FIGO Type 6–7 fibroid. Despite the immense complexity, the patient’s uterus was 100% preserved, leading to early discharge on Day 3.',
     patientAge: 'Adult Female',
     clinicalPresentation:
-      'Patient presented with significant abdominal distension, palpable pelvic-abdominal mass, and compression symptoms secondary to massive uterine enlargement.',
+      'Patient presented with chronic pelvic fullness, significant abdominal distension, and severe compression symptoms secondary to an enormous exophytic uterine neoplasm. Imaging delineated a massive FIGO Type 6–7 fibroid.',
     clinicalChallenge:
-      'Giant pelvic masses exceeding 3 to 4 kilograms are routinely managed via open laparotomy with extensive abdominal incisions, substantial surgical trauma, and high potential blood loss. The challenge was executing complete removal purely laparoscopically.',
+      'Giant pelvic tumors exceeding 1.5 kg conventionally prompt open laparotomy and high rates of hysterectomy. Preserving the uterus purely laparoscopically demanded 10 hours of surgical precision, continuous vascular control, and reconstructive endurance.',
     surgicalIntervention:
-      'Advanced Laparoscopic Surgery (Keyhole Surgery). Employing high-resolution optical magnification, specialized endoscopic morcellation techniques, and meticulous vascular control, 4 large fibroids and the 4kg pathology were successfully extracted through tiny incisions.',
+      '10-Hour Complex Laparoscopic Myomectomy. Through minimally invasive keyhole ports, Dr. Shabnam devascularized and dissected the giant FIGO Type 6–7 fibroid, executed multi-layered uterine wall reconstruction (myorrhaphy), and safely morcellated the 1.660 kg pathology.',
     clinicalOutcome:
-      'Outstanding cosmetic and clinical outcome. Patient experienced minimal blood loss, dramatically reduced post-operative pain, and early discharge within days, showcasing the power of minimally invasive excellence.',
+      'Complete excision with 100% uterine preservation. The patient had minimal blood loss, minimal scarring, experienced an exceptionally fast post-operative recovery, and was safely discharged home on Day 3.',
     instagramUrl:
-      'https://www.instagram.com/p/DQ6r8lGE8oI/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA%3D%3D',
+      'https://www.instagram.com/p/Dao-Ppuk4pT/?img_index=6&stkn=MTRoNmw0NW1mY2QycA%3D%3D',
     stats: [
-      { label: 'Pathology Mass', value: '4.0 kg' },
-      { label: 'Incision Type', value: 'Keyhole (Min. Invasive)' },
-      { label: 'Major Fibroids', value: '4 Large' },
+      { label: 'Excised Specimen', value: '1.660 kg' },
+      { label: 'Procedure Duration', value: '10 Hours' },
+      { label: 'Hospital Stay', value: 'Discharged Day 3' },
     ],
     imageSlots: [
-      { id: 1, title: 'Diagnostic Imaging', caption: 'Pre-operative visualization of 4kg pelvic pathology' },
-      { id: 2, title: 'Laparoscopic View', caption: 'High-definition keyhole surgical dissection' },
-      { id: 3, title: 'Pathology Specimen', caption: 'Excised 4kg uterine mass and fibroids' },
-      { id: 4, title: 'Micro-Incision Healing', caption: 'Rapid patient ambulation and recovery' },
+      {
+        id: 1,
+        title: 'Giant FIGO 6–7 Fibroid',
+        caption: 'High-definition endoscopic view of the massive vascular uterine tumor in pelvis',
+        imageUrl: '/images/cases/case2-1-giant-fibroid.jpg',
+      },
+      {
+        id: 2,
+        title: 'Intra-Op Dissection & Morcellation',
+        caption: 'Precision endoscopic dissection and controlled morcellation without open incision',
+        imageUrl: '/images/cases/case2-2-lap-dissection.jpg',
+      },
+      {
+        id: 3,
+        title: 'Multi-Layer Uterine Reconstruction',
+        caption: 'Meticulous laparoscopic suturing (myorrhaphy) restoring full uterine integrity',
+        imageUrl: '/images/cases/case2-3-uterine-reconstruction.jpg',
+      },
+      {
+        id: 4,
+        title: 'Pathology Weight Confirmation',
+        caption: 'Hospital electronic scale verifying excised fibroid tissue weighing 1.660 kg',
+        imageUrl: '/images/cases/case2-4-specimen-scale.jpg',
+      },
     ],
   },
 ];
@@ -380,21 +420,40 @@ function Cases() {
                       <i className="fa-solid fa-camera" aria-hidden="true"></i>
                       <h4>Clinical Gallery &amp; Scan Records</h4>
                     </div>
-                    <span className="case-media-count">4 Image Spaces Reserved</span>
+                    {/* <span className="case-media-count">
+                      {activeCase.imageSlots.some((s) => s.imageUrl)
+                        
+                        }
+                    </span> */}
                   </div>
 
                   <div className="case-image-slots-grid">
                     {activeCase.imageSlots.map((slot) => (
-                      <div key={slot.id} className="case-image-slot" tabIndex={0}>
-                        <div className="case-image-slot-badge">Space #{slot.id}</div>
-                        <div className="case-image-slot-placeholder">
-                          <div className="case-slot-icon-ring">
-                            <i className="fa-regular fa-image" aria-hidden="true"></i>
+                      <div
+                        key={slot.id}
+                        className={`case-image-slot ${slot.imageUrl ? 'has-image' : ''}`}
+                        tabIndex={0}
+                      >
+                        
+                        {slot.imageUrl ? (
+                          <div className="case-slot-img-wrapper">
+                            <img
+                              src={slot.imageUrl}
+                              alt={slot.title}
+                              className="case-slot-actual-img"
+                              loading="lazy"
+                            />
                           </div>
-                          <span className="case-slot-action">
-                            <i className="fa-solid fa-plus" aria-hidden="true"></i> Image Slot
-                          </span>
-                        </div>
+                        ) : (
+                          <div className="case-image-slot-placeholder">
+                            <div className="case-slot-icon-ring">
+                              <i className="fa-regular fa-image" aria-hidden="true"></i>
+                            </div>
+                            <span className="case-slot-action">
+                              <i className="fa-solid fa-plus" aria-hidden="true"></i> Image Slot
+                            </span>
+                          </div>
+                        )}
                         <div className="case-image-slot-meta">
                           <span className="case-slot-title">{slot.title}</span>
                           <span className="case-slot-caption">{slot.caption}</span>
