@@ -7,7 +7,6 @@ const MOMENT_IMAGES = [
   { id: 3, src: '/images/3.jpg', alt: 'Happy parents holding newborn baby with Dr. Shabnam' },
   { id: 4, src: '/images/4.jpg', alt: 'Joyful family with baby at Dr. Shabnam clinic' },
   { id: 5, src: '/images/5.jpg', alt: 'Newborn baby in clinic care' },
-  { id: 6, src: '/images/6.jpg', alt: 'Cherished moment with newborn and parents' },
   { id: 7, src: '/images/7.jpg', alt: 'Blessed family moment with baby' },
   { id: 8, src: '/images/8.jpg', alt: 'Parent holding newborn infant with joy' },
   { id: 9, src: '/images/9.jpg', alt: 'Smiling mother and baby with clinic team' },
@@ -89,7 +88,7 @@ function Moments() {
         <div className="section-header">
           <h2 className="section-title">Happy Moments</h2>
           <p className="section-subtitle">
-            Real smiles, real families, real joy — captured at every step of the journey.
+            Real smiles, real families, real joy, captured at every step of the journey.
           </p>
           <div className="accent-line"></div>
         </div>

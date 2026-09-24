@@ -4,8 +4,12 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="#home" className="nav-logo">
-              <img src="/images/sfgc-logo.png" alt="Dr. Shabnam's Fertility & Gynec Centre" />
+            <a href="#home" className="footer-logo-link" aria-label="Dr. Shabnam's Fertility & Gynec Centre">
+              <img
+                src="/images/SFGC_LOGO_FOOTER.png"
+                alt="Dr. Shabnam's Fertility & Gynec Centre"
+                className="footer-logo-img"
+              />
             </a>
             <p>Compassionate gynaecology and fertility care for the people of Pondicherry and beyond. Your journey to parenthood begins here.</p>
           </div>

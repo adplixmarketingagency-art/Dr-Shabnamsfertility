@@ -1051,6 +1051,16 @@ textarea:focus-visible {
 .split-cream { background: var(--white); }
 .split-white { background: var(--white); }
 
+.nowrap {
+  white-space: nowrap !important;
+}
+
+.about .section-title,
+.about-title {
+  white-space: nowrap;
+  font-size: clamp(1.35rem, 2.7vw, 2.2rem);
+}
+
 /* Preserve About component visual overrides */
 .about .split-section-visual {
   min-height: 420px;
@@ -2245,13 +2255,20 @@ textarea:focus-visible {
   .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
 }
 
+.footer-brand .footer-logo-link,
 .footer-brand .nav-logo {
-  font-size: 1.5rem;
-  color: var(--white);
-  margin-bottom: 16px;
-  display: inline-flex;
+  display: inline-block;
+  margin-bottom: 14px;
 }
-.footer-brand .nav-logo img { height: 80px; width: auto; }
+.footer-brand .footer-logo-img,
+.footer-brand .nav-logo img {
+  height: 110px;
+  max-height: 150px;
+  width: auto;
+  max-width: 390px;
+  /* object-fit: contain; */
+  /* display: block; */
+}
 .footer-brand p {
   font-size: 0.9rem;
   line-height: 1.8;

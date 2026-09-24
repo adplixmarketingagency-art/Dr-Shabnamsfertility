@@ -1,11 +1,17 @@
 function About() {
   const qualifications = [
     'Graduated and post-graduated (M.S) in OBG from Maharashtra with exclusive training in reproductive medicine',
-    'Advanced laparoscopy training under renowned experts Dr. PG. Paul and Dr. Dipak Limbachiya',
+    (
+      <>
+       
+     Advaced Laparoscopy training under Dr. PG. Paul and <br></br> Dr. Dipak Limbachiya
+         
+      </>
+    ),
     'Expert in IVF / ICSI, associated with various IVF centres across Pondicherry and Chennai',
     'Specialises in adolescent PCOD care and high-risk obstetric cases',
     'Skilled in total laparoscopic hysterectomy, hysteroscopic surgeries, and gynaec laparoscopy',
-    'Manages pregnancy with medical disorders — diabetes, hypertension, cardiac issues, thyroid, and obesity',
+    'Manages pregnancy with medical disorders: diabetes, hypertension, cardiac issues, thyroid, and obesity',
   ];
 
   return (
@@ -20,13 +26,13 @@ function About() {
             </div>
           </div>
           <div className="split-section-content">
-            <h2 className="section-title">About Dr. Shabnam Khan</h2>
+            <h2 className="section-title about-title">About Dr. Shabnam Khan</h2>
             <p>
-              Consultant Gynaec Laparoscopic Surgeon & Fertility Specialist — Fellowship in Advanced Laparoscopy & Reproductive Medicine.
+              Consultant Gynaec Laparoscopic Surgeon &amp; Fertility Specialist, Fellowship in Advanced Laparoscopy &amp; Reproductive Medicine.
             </p>
             <ul className="about-list">
-              {qualifications.map((q) => (
-                <li key={q}>
+              {qualifications.map((q, idx) => (
+                <li key={idx}>
                   <span className="about-check">✓</span>
                   {q}
                 </li>

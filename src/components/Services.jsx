@@ -29,7 +29,7 @@ function Services() {
       category: 'Key-Hole Surgery',
       icon: 'fa-solid fa-microscope',
       title: 'Laparoscopy',
-      desc: 'Key-hole surgery for endometriosis, fibroids, and ovarian cysts — smaller incisions, faster recovery.',
+      desc: 'Key-hole surgery for endometriosis, fibroids, and ovarian cysts with smaller incisions and faster recovery.',
       highlight: 'Rapid Healing',
     },
     {
@@ -53,7 +53,7 @@ function Services() {
       category: 'Gynaecological Care',
       icon: 'fa-solid fa-procedures',
       title: 'Hysterectomy',
-      desc: 'Laparoscopic and vaginal hysterectomy for fibroids, bleeding disorders, and precancerous conditions — day-care options available.',
+      desc: 'Laparoscopic and vaginal hysterectomy for fibroids, bleeding disorders, and precancerous conditions with day-care options available.',
       highlight: 'Day-Care Available',
     },
     {
@@ -77,7 +77,7 @@ function Services() {
       category: 'Cosmetic Surgery',
       icon: 'fa-solid fa-spa',
       title: 'Cosmetic Gynaecology',
-      desc: 'Hymenoplasty, vaginoplasty, labiaplasty, and monsplasty — performed with discretion and clinical excellence.',
+      desc: 'Hymenoplasty, vaginoplasty, labiaplasty, and monsplasty performed with discretion and clinical excellence.',
       highlight: 'Absolute Discretion',
     },
   ];
