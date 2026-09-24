@@ -16,6 +16,7 @@ function Nav() {
     { href: '#services', label: 'Services' },
     { href: '#about', label: 'Doctor' },
     { href: '#gallery', label: 'Gallery' },
+    { href: '#cases', label: 'Cases' },
     { href: '#testimonials', label: 'Reviews' },
     { href: '#news', label: 'News' },
     { href: '#contact', label: 'Contact' },

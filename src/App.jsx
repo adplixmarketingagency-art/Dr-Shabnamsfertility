@@ -5,6 +5,7 @@ import Features from './components/Features';
 import Services from './components/Services';
 import SplitSection from './components/SplitSection';
 import Gallery from './components/Gallery';
+import Cases from './components/Cases';
 import Moments from './components/Moments';
 import About from './components/About';
 import News from './components/News';
@@ -22,7 +23,7 @@ function App() {
         <Hero />
         <ScrollReveal><Stats /></ScrollReveal>
         <ScrollReveal><Features /></ScrollReveal>
-        <ScrollReveal><Services /></ScrollReveal>
+        <Services />
         <ScrollReveal><About /></ScrollReveal>
         <ScrollReveal>
           <SplitSection
@@ -43,6 +44,7 @@ function App() {
           </SplitSection>
         </ScrollReveal>
         <ScrollReveal><Gallery /></ScrollReveal>
+        <ScrollReveal><Cases /></ScrollReveal>
         <ScrollReveal><Moments /></ScrollReveal>
         <ScrollReveal><Testimonials /></ScrollReveal>
         <ScrollReveal><News /></ScrollReveal>
