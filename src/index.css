@@ -354,7 +354,7 @@ textarea:focus-visible {
   min-height: 100svh;
   display: flex;
   align-items: center;
-  background: var(--ink) url('/images/banner.jpg') 95% center / 105% auto no-repeat;
+  background: var(--ink) url('/images/hero-banner-v2.jpg') 95% center / 105% auto no-repeat;
   position: relative;
   overflow: hidden;
   padding-top: 120px;
