@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
@@ -30,9 +30,19 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Validate Cloudflare API token
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo '::error::CLOUDFLARE_API_TOKEN is missing. Add it as a repository Actions secret before deploying.'
+            exit 1
+          fi
+
       - name: Deploy to Cloudflare Worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: '65446830387918c7b7a15450c724e9e2'
-          command: deploy
+          wranglerVersion: '4.86.0'
+          command: deploy --keep-vars
