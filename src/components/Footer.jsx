@@ -37,6 +37,16 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <p>Copyright &copy; 2026 Dr. Shabnam Khan. All Rights Reserved.</p>
+          <div className="footer-credit">
+            <span>Powered by Adplix Media</span>
+            <img
+              src="/images/adplix-media-logo.jpg"
+              alt="Adplix Media logo"
+              width="40"
+              height="40"
+              loading="lazy"
+            />
+          </div>
           <div className="footer-social">
             <a href="https://www.instagram.com/dr.shabnam_fertility?stkn=MWdrenF4cHRneXFpcA==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>

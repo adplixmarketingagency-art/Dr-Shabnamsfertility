@@ -2352,6 +2352,7 @@ textarea:focus-visible {
   padding-top: 24px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 12px;
   align-items: center;
   text-align: center;
@@ -2360,6 +2361,18 @@ textarea:focus-visible {
   .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
 }
 .footer-bottom p { font-size: 0.85rem; }
+.footer-credit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+.footer-credit img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+}
 .footer-social { display: flex; gap: 12px; }
 .footer-social a {
   width: 36px;
