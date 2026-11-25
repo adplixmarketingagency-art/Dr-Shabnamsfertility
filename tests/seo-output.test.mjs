@@ -29,6 +29,9 @@ test('the homepage declares one canonical and truthful clinic metadata', async (
   assert.equal(clinic.telephone, '+917695852669');
   assert.equal(clinic.aggregateRating, undefined);
   assert.equal(clinic.review, undefined);
+  assert.equal(new URL(clinic.hasMap).hostname, 'www.google.com');
+  assert.ok(clinic.hasMap.includes('0xb321f886f2b280c6'), 'Maps relationship identifies the observed clinic, not a generic search');
+  assert.deepEqual(clinic.sameAs, [clinic.hasMap]);
 });
 
 test('the clinic, website and page form one connected identity graph', async () => {

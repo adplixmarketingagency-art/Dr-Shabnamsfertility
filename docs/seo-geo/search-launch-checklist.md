@@ -21,7 +21,9 @@ Read-only GET checks at approximately **09:46–09:49 UTC / 15:16–15:19 IST, 2
 
 Shared endpoint body SHA-256: `502cda35fc50e3ddee956eabf22947429379fca7c09bf05b42701d553f3a6fea`. The current live JavaScript bundle also contains the inherited email mismatch and placeholder form described below; no submission was attempted.
 
-## Verified release and account results — 25 November 2026
+## Initial verified release and account results — 25 November 2026
+
+This section preserves the initial release/account evidence. Later technical delivery and limited visibility observations are linked from [the competitor release record](competitor-release-2026-11-25.md).
 
 Production version **f2547ead-45e3-4cf3-9799-9427e7c82e71** supersedes the historical baseline above. Build, lint, **10 SEO output tests**, **2 worker tests** and **11 live HTTP tests** passed. The canonical domain delivers the prerendered page, metadata/schema, actual crawler documents, real 404s and permanent legacy redirects. Apex HTTP redirects to HTTPS with path/query preserved. The www hostname still requires a DNS decision; no DNS edit was made. See `release-evidence-2026-11-25.json` for sanitized results and the built/live HTML comparison.
 

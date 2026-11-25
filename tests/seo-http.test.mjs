@@ -66,9 +66,12 @@ test('simulated reader, Googlebot and OAI-SearchBot requests receive the same in
       assert.equal(clinic.mainEntityOfPage['@id'], page['@id']);
       assert.equal(clinic.telephone, '+917695852669');
       assert.equal(clinic.address.addressLocality, 'Puducherry');
+      assert.equal(new URL(clinic.hasMap).hostname, 'www.google.com');
+      assert.ok(clinic.hasMap.includes('0xb321f886f2b280c6'));
+      assert.deepEqual(clinic.sameAs, [clinic.hasMap]);
       // Any clinic claim beyond this reviewed factual inventory requires explicit review.
       assert.deepEqual(Object.keys(clinic).sort(), [
-        '@id', '@type', 'name', 'url', 'telephone', 'address', 'logo', 'image', 'mainEntityOfPage',
+        '@id', '@type', 'name', 'url', 'telephone', 'address', 'logo', 'image', 'hasMap', 'sameAs', 'mainEntityOfPage',
       ].sort(), 'clinic schema must not add unverified ratings, reviews or clinical outcome claims');
       const inspectClaims = value => {
         if (!value || typeof value !== 'object') return;

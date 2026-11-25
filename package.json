@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "test:seo": "node --test tests/seo-output.test.mjs",
     "test:worker": "node --test tests/worker.test.mjs",
+    "test:indexnow": "node --test tests/indexnow.test.mjs",
     "test:seo:http": "node --test tests/seo-http.test.mjs",
+    "indexnow:check": "node scripts/indexnow.mjs --dry-run",
+    "indexnow:submit": "node scripts/indexnow.mjs --submit",
     "verify:production": "node scripts/verify-production.mjs"
   },
   "dependencies": {

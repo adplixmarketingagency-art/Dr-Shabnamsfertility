@@ -1,0 +1,61 @@
+{
+  "observationDate": "2026-11-25",
+  "timezone": "Asia/Kolkata",
+  "source": "Main-agent supplied observations from completed Chrome checks earlier in this chat; not rerun as a controlled panel in the competitor pass",
+  "observations": [
+    {
+      "surface": "Google Search",
+      "query": "best ivf center in pondy",
+      "ordinaryOrganicPosition": 6,
+      "expandedAIOverviewListPosition": 2,
+      "aiOverviewOwnedDomainCitation": "https://drshabnamsfertility.com/",
+      "displayedLocation": "Irumbai, Tamil Nadu, inferred from IP",
+      "topRatedChipVisible": true,
+      "personalisation": "Results are personalised remained displayed after Try without personalisation was clicked",
+      "interpretation": "Limited observed page order; not a neutral or city-wide rank or a deployment effect",
+      "observationId": "ADHOC-20261125-01"
+    },
+    {
+      "surface": "ChatGPT",
+      "query": "Which are the best IVF centers in Pondy?",
+      "mode": "Signed out, fresh chat, web search enabled",
+      "answerCompleted": true,
+      "clinicMentioned": false,
+      "listedBrands": [
+        "Nova",
+        "Sudha",
+        "Iswarya",
+        "ARC",
+        "Srishti",
+        "Blossom"
+      ],
+      "completeCitationInventory": "not_recorded",
+      "interpretation": "One completed answer; no causal explanation or long-term absence inferred",
+      "observationId": "ADHOC-20261125-02"
+    },
+    {
+      "surface": "ChatGPT",
+      "query": "Best IVF center in Pondicherry",
+      "mode": "Signed out, fresh chat, web search enabled",
+      "answerCompleted": true,
+      "clinicMentioned": false,
+      "listedBrands": [
+        "Sudha",
+        "Nova",
+        "Iswarya",
+        "ARC",
+        "Blossom"
+      ],
+      "completeCitationInventory": "not_recorded",
+      "interpretation": "One completed answer; no causal explanation or long-term absence inferred",
+      "observationId": "ADHOC-20261125-03"
+    }
+  ],
+  "measurementLimits": [
+    "These ad hoc queries do not complete or replace the frozen 144-observation prompt panel",
+    "No prior measurement makes these observations a controlled before/after experiment",
+    "AI output is not independent verification of clinical facts or regulatory status",
+    "An AI answer labelled ivfcheck.org as a national registry; that label does not make the third-party site the official government registry"
+  ],
+  "browserContext": "Agency Chrome profile; account and session identifiers omitted"
+}

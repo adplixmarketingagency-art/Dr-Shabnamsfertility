@@ -2,6 +2,12 @@
 
 25 November 2026, Asia/Kolkata. Branch: `codex/seo-geo-foundations`.
 
+## Competitor follow-up
+
+The [competitor gap plan](competitor-gap-plan-2026-11-25.md) records the six-provider comparison and remaining fact/access work. The [competitor release record](competitor-release-2026-11-25.md) tracks Maps identity markup, IndexNow notification tooling and current delivery evidence. The original rendered body, UI bundles and 73 protected source/image files are unchanged in this follow-up.
+
+The [ad hoc observations](visibility-observations-2026-11-25.json) show the clinic in the inspected Google organic and AI Overview results but omitted from two signed-out ChatGPT answers. These are limited observations, not a neutral rank, a trend or evidence of a deployment effect. The frozen 144-observation panel remains unrun.
+
 ## Released implementation
 
 The user requested the original UI be restored while keeping the Patient Resources replacement for news. This supersedes the earlier four-page review build.
@@ -18,7 +24,7 @@ The user requested the original UI be restored while keeping the Patient Resourc
 - Strategy, proof ledger, citation audit, AI prompt panel and measurement documents remain planning material. No external profile edits or review messages were performed.
 - The SEO Audit skill and a pinned public AI SEO skill informed this pass; platform claims were checked against official sources. The wildcard robots rule already allows search discovery, so no redundant bot allowlist or speculative AI-only file was added. See `search-launch-checklist.md` for dated sources and release/account steps.
 
-## Fresh verification after the SEO/GEO pass
+## Initial-release verification (historical)
 
 - `npm run build`: passed; generated one homepage and its sitemap.
 - `npm run lint`: passed.
@@ -38,7 +44,7 @@ The user requested the original UI be restored while keeping the Patient Resourc
 1. The restored form retains its pre-existing placeholder `action="#"`; message delivery is not implemented. This restoration does not establish that form submissions work.
 2. Original visible claims and contact details are restored as requested. Owner/clinical verification of credentials, outcomes, hours, contact routing, testimonials and image permissions remains separate work. No approval was invented.
 3. Search Console is connected and the homepage is confirmed indexed. The agency Business Profile Manager contains its own agency listing, with no clinic management role observed. Clinic profile edits therefore remain blocked on access and fact reconciliation. Bing Webmaster Tools, analytics, the AI observation panel and ranking/conversion measurements remain unexecuted.
-4. The earlier 1,542-byte production shell is a historical pre-release baseline, superseded by the live prerendered release and passing HTTP checks. The www hostname failed DNS resolution from this environment; no DNS change was made. Ranking improvement and AI citations remain unknown; indexed status and technical delivery do not establish either.
+4. The earlier 1,542-byte production shell is a historical pre-release baseline, superseded by the live prerendered release and passing HTTP checks. The www hostname failed DNS resolution from this environment; no DNS change was made. Ranking or AI citation improvement is unmeasured; the later ad hoc observations above do not establish a trend or deployment effect.
 5. The preserved logo remains large at 13.44 MB. Further resizing/format replacement would need a separate image change with visual review. Existing count-up statistics begin at zero in server-rendered HTML and the form is a placeholder; preserving the current UI/animation leaves those inherited limitations in place.
 
 Preview command (Node 20 is installed globally):

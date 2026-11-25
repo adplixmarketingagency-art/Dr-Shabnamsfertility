@@ -7,6 +7,9 @@ export const clinic = {
   language: 'en-IN',
   logo: '/images/sfgc-logo.png',
   image: '/images/mobile-portrait.png',
+  // Public Maps profile rechecked on 2026-11-25: the domain and Nellithope
+  // address match this clinic. This does not assert profile management access.
+  map: "https://www.google.com/maps/place/Dr.+Shabnam's+Fertility+%26+Gynec+Center/@11.9311511,79.8101028,765m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a53619ee3df09d3:0xb321f886f2b280c6!8m2!3d11.9311511!4d79.8101028!16s%2Fg%2F11h3_ynv99",
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'No.162/1, 3rd Floor, Pointcare Street, Nellithope',
@@ -27,6 +30,8 @@ export const clinicSchema = {
   address: clinic.address,
   logo: `${clinic.origin}${clinic.logo}`,
   image: `${clinic.origin}${clinic.image}`,
+  hasMap: clinic.map,
+  sameAs: [clinic.map],
 };
 
 // Describe the same clinic and page for every crawler. Unverified credentials,

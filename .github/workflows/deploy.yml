@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,6 +37,7 @@ jobs:
           npm run lint
           npm run test:seo
           npm run test:worker
+          npm run test:indexnow
 
       - name: Validate Cloudflare API token
         env:
@@ -55,3 +58,17 @@ jobs:
 
       - name: Verify the public search foundations
         run: npm run verify:production
+
+      - name: Notify IndexNow of published updates
+        if: github.event_name == 'push'
+        continue-on-error: true
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          if git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            if git diff --quiet "$BEFORE_SHA" "$GITHUB_SHA" -- src/ public/ index.html package.json package-lock.json vite.config.js scripts/prerender.mjs wrangler.jsonc; then
+              echo 'No published files changed; skipping IndexNow.'
+              exit 0
+            fi
+          fi
+          npm run indexnow:submit
