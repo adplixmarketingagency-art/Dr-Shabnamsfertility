@@ -1,0 +1,111 @@
+{
+  "releaseDate": "2026-11-25",
+  "timezone": "Asia/Kolkata",
+  "origin": "https://drshabnamsfertility.com",
+  "implementationCommit": "33072bc0e91248e9fcd817e219ad907a23750450",
+  "repository": "adplixmarketingagency-art/Dr-Shabnamsfertility",
+  "pushedBranches": [
+    "main",
+    "codex/seo-geo-foundations"
+  ],
+  "ci": {
+    "runId": 45656621012,
+    "attempt": 2,
+    "conclusion": "success",
+    "completedAt": "2026-11-25T16:44:13Z",
+    "url": "https://github.com/adplixmarketingagency-art/Dr-Shabnamsfertility/actions/runs/45656621012",
+    "implementationCloudflareVersion": "172d929f-52da-4bee-ba3c-0a182f2b109b"
+  },
+  "firstAttempt": {
+    "conclusion": "failure",
+    "deployment": "completed",
+    "verification": "Mixed Maps-schema presence across immediate post-deploy simulations; propagation inferred, not proven",
+    "notification": "skipped"
+  },
+  "tests": {
+    "build": "passed",
+    "lint": "passed",
+    "seoOutput": {
+      "passed": 10,
+      "failed": 0
+    },
+    "worker": {
+      "passed": 2,
+      "failed": 0
+    },
+    "indexnow": {
+      "passed": 17,
+      "failed": 0
+    },
+    "localHttp": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 1
+    },
+    "productionHttp": {
+      "passed": 11,
+      "failed": 0
+    }
+  },
+  "uiPreservation": {
+    "protectedFilesChecked": 73,
+    "changedFiles": [],
+    "renderedBodyIdentical": true,
+    "uiBundleReferencesIdentical": true
+  },
+  "liveParity": {
+    "checkedAt": "2026-11-25T16:43:48.536Z",
+    "origin": "https://drshabnamsfertility.com",
+    "pages": [
+      {
+        "label": "reader",
+        "status": 200,
+        "bytes": 27505,
+        "sha256": "a6f235ce301d62acde21956753dc577ca1b482220557011ea67236b50d4c5aec",
+        "matchesBuild": true
+      },
+      {
+        "label": "Googlebot simulation",
+        "status": 200,
+        "bytes": 27505,
+        "sha256": "a6f235ce301d62acde21956753dc577ca1b482220557011ea67236b50d4c5aec",
+        "matchesBuild": true
+      },
+      {
+        "label": "OAI-SearchBot simulation",
+        "status": 200,
+        "bytes": 27505,
+        "sha256": "a6f235ce301d62acde21956753dc577ca1b482220557011ea67236b50d4c5aec",
+        "matchesBuild": true
+      }
+    ],
+    "ownershipFile": {
+      "status": 200,
+      "contentType": "text/plain",
+      "matchesLocal": true
+    },
+    "limits": "User-agent simulations do not establish genuine crawler-IP/WAF access, indexing or recommendations"
+  },
+  "indexnow": {
+    "status": 202,
+    "notifiedUrls": [
+      "https://drshabnamsfertility.com/"
+    ],
+    "keyValidationPending": true,
+    "receivedAt": "2026-11-25T16:44:10Z",
+    "indexingOrRankingEstablished": false,
+    "manualDuplicateSubmissions": 0
+  },
+  "scope": {
+    "visibleUiChanged": false,
+    "draftPagesPublished": false,
+    "externalProfileEdits": false,
+    "outreachSent": false
+  },
+  "limits": [
+    "No post-release recommendation gain measured",
+    "Earlier ad hoc Google/ChatGPT observations are not a controlled panel or before/after comparison",
+    "Clinic GBP role and current contact/hours/clinical facts remain unresolved",
+    "Genuine crawler-IP/WAF access and Bing property access remain unverified"
+  ]
+}

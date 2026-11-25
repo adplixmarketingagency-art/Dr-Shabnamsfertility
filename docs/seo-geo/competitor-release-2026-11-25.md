@@ -12,7 +12,13 @@ Local Graphify update completed using AST extraction: 262 nodes, 354 edges, 15 c
 
 ## Delivery status
 
-Before this follow-up, agency main and task branch matched `639f859e8bf373caf663a3597ca3baeeac2f3dc3`. The agency repository reports write access. Current follow-up commit, CI, production checks and IndexNow response will be recorded after delivery; no live notification is claimed by the local dry run.
+Implementation commit `33072bc0e91248e9fcd817e219ad907a23750450` was pushed atomically to the agency repository's `main` and `codex/seo-geo-foundations` branches. [CI run 45656621012, attempt 2](https://github.com/adplixmarketingagency-art/Dr-Shabnamsfertility/actions/runs/45656621012) completed successfully, including all 11 production HTTP tests. The implementation deployment's Cloudflare version is `172d929f-52da-4bee-ba3c-0a182f2b109b`.
+
+The first attempt deployed version `d1f6abae-66a7-4818-8970-4c644c36265a`, but its immediate schema assertions passed for the Googlebot simulation and failed for reader/OAI simulations because Maps data was absent. This mixed response is consistent with deployment propagation; it is not evidence of bot-specific serving logic. A fresh complete production run passed all 11 tests. CI was rerun and passed without a source change. The first attempt skipped notification.
+
+CI attempt 2 sent one homepage notification and received **IndexNow HTTP 202: URL received, key validation pending**. This is not confirmation of completed ownership validation, crawling, indexing, placement or ChatGPT recommendation. No manual duplicate submission was made. A later documentation-only delivery does not change the published page and is configured to skip notification.
+
+Live reader, Googlebot simulation and OAI-SearchBot simulation responses were each 200 and byte-identical to the 27,505-byte build. The deployed key file returned 200 `text/plain` and matched the local public ownership key. These are HTTP simulations, not genuine crawler-IP/WAF evidence. Sanitized details are in [the follow-up evidence](competitor-release-evidence-2026-11-25.json).
 
 ## Remaining evidence and access
 
