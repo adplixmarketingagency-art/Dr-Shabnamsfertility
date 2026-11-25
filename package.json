@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:seo": "node --test tests/seo-output.test.mjs",
+    "test:worker": "node --test tests/worker.test.mjs",
+    "test:seo:http": "node --test tests/seo-http.test.mjs",
+    "verify:production": "node scripts/verify-production.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",

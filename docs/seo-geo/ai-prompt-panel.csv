@@ -1,0 +1,13 @@
+prompt_id,panel_version,prepared_date,intent,recommendation_cohort,exact_prompt,ChatGPT Search,Google AI Mode,Bing/Copilot,Perplexity,repeats
+P01,v1,2026-11-25,nonbranded,yes,"What are the best IVF centres in Pondicherry, and how should I compare them?",template_not_run,template_not_run,template_not_run,template_not_run,3
+P02,v1,2026-11-25,nonbranded,yes,"What are the best IVF centers in Puducherry, and how should I compare them?",template_not_run,template_not_run,template_not_run,template_not_run,3
+P03,v1,2026-11-25,nonbranded,yes,"How should I choose an IVF centre in Pondicherry, including registration, treating team and procedure locations?",template_not_run,template_not_run,template_not_run,template_not_run,3
+P04,v1,2026-11-25,nonbranded,no,What should an itemised IVF cost estimate in Pondicherry include and exclude?,template_not_run,template_not_run,template_not_run,template_not_run,3
+P05,v1,2026-11-25,nonbranded,yes,Which fertility specialists in Puducherry can I contact for an initial consultation?,template_not_run,template_not_run,template_not_run,template_not_run,3
+P06,v1,2026-11-25,nonbranded,yes,Where can I book a fertility consultation near Nellithope in Puducherry?,template_not_run,template_not_run,template_not_run,template_not_run,3
+P07,v1,2026-11-25,nonbranded,no,What questions should I ask a fertility specialist in Pondicherry about choosing between IUI and IVF?,template_not_run,template_not_run,template_not_run,template_not_run,3
+P08,v1,2026-11-25,nonbranded,no,What should I bring to my first fertility consultation in Pondicherry?,template_not_run,template_not_run,template_not_run,template_not_run,3
+P09,v1,2026-11-25,branded,no,"Where is Dr. Shabnam Khan's fertility clinic in Puducherry, and what is its current address?",template_not_run,template_not_run,template_not_run,template_not_run,3
+P10,v1,2026-11-25,branded,no,"Does Dr. Shabnam Khan's clinic in Puducherry provide IVF procedures onsite or through another facility, and what sources confirm the locations?",template_not_run,template_not_run,template_not_run,template_not_run,3
+P11,v1,2026-11-25,branded,no,What qualifications and medical registration can be verified for Dr. Shabnam Khan in Puducherry?,template_not_run,template_not_run,template_not_run,template_not_run,3
+P12,v1,2026-11-25,branded,no,"How can I book an appointment with Dr. Shabnam Khan's fertility clinic in Puducherry, and what are the consultation hours?",template_not_run,template_not_run,template_not_run,template_not_run,3

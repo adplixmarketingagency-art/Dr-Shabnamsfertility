@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-11-25T10:25:54.293Z",
+  "origin": "https://drshabnamsfertility.com",
+  "cloudflare_version": "f2547ead-45e3-4cf3-9799-9427e7c82e71",
+  "http_status": 200,
+  "html_bytes": 27041,
+  "html_sha256": "8c8519900b88e02f034cca6ec3da961eb0663feede8b7f0b51837c12621a8947",
+  "deployed_html_matches_build": true,
+  "ui_manifest_files_checked": 65,
+  "ui_manifest_files_changed": [],
+  "test_results": {
+    "build": "passed",
+    "lint": "passed",
+    "seo_output": {
+      "passed": 10,
+      "failed": 0
+    },
+    "worker": {
+      "passed": 2,
+      "failed": 0
+    },
+    "live_http": {
+      "passed": 11,
+      "failed": 0
+    }
+  },
+  "gsc": {
+    "property": "https://drshabnamsfertility.com/",
+    "ownership": "verified HTML tag in agency profile",
+    "sitemap": "/sitemap.xml",
+    "sitemap_status": "Success",
+    "submitted_date": "2026-11-25",
+    "last_read_date": "2026-11-25",
+    "discovered_pages": 1,
+    "google_index": "URL is on Google; Page is indexed",
+    "live_test": "URL is available to Google; Page can be indexed",
+    "live_test_displayed_time": "Nov 25, 2026, 3:50 PM",
+    "indexing_request": "Indexing requested; priority crawl queue",
+    "manual_actions": "No issues detected",
+    "security_issues": "No issues detected",
+    "robots": "Valid",
+    "search_generative_ai": "Include, inherited from drshabnamsfertility.com; no setting changed",
+    "performance": "Processing data; rankings and AI citations unknown"
+  },
+  "limits": [
+    "Genuine OAI-SearchBot IP/WAF access unverified by simulations",
+    "Python urllib default User-Agent returned HTTP 403; Node reader/crawler simulations pass, so general bot acceptance is not established",
+    "www DNS unresolved from environment; no DNS edits",
+    "Clinic GBP manager access absent from agency account",
+    "No ranking, AI citation or enquiry gain measured"
+  ]
+}

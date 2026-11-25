@@ -4,12 +4,8 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="#home" className="footer-logo-link" aria-label="Dr. Shabnam's Fertility & Gynec Centre">
-              <img
-                src="/images/SFGC_LOGO_FOOTER.png"
-                alt="Dr. Shabnam's Fertility & Gynec Centre"
-                className="footer-logo-img"
-              />
+            <a href="#home" className="nav-logo">
+              <img src="/images/sfgc-logo.png" alt="Dr. Shabnam's Fertility & Gynec Centre" />
             </a>
             <p>Compassionate gynaecology and fertility care for the people of Pondicherry and beyond. Your journey to parenthood begins here.</p>
           </div>
@@ -37,16 +33,6 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <p>Copyright &copy; 2026 Dr. Shabnam Khan. All Rights Reserved.</p>
-          <div className="footer-credit">
-            <span>Powered by Adplix Media</span>
-            <img
-              src="/images/adplix-media-logo.jpg"
-              alt="Adplix Media logo"
-              width="40"
-              height="40"
-              loading="lazy"
-            />
-          </div>
           <div className="footer-social">
             <a href="https://www.instagram.com/dr.shabnam_fertility?stkn=MWdrenF4cHRneXFpcA==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>

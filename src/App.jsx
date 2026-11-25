@@ -1,10 +1,10 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
+import Features from './components/Features';
 import Services from './components/Services';
 import SplitSection from './components/SplitSection';
 import Gallery from './components/Gallery';
-import Cases from './components/Cases';
 import Moments from './components/Moments';
 import About from './components/About';
 import News from './components/News';
@@ -21,12 +21,13 @@ function App() {
       <main id="main">
         <Hero />
         <ScrollReveal><Stats /></ScrollReveal>
-        <Services />
+        <ScrollReveal><Features /></ScrollReveal>
+        <ScrollReveal><Services /></ScrollReveal>
         <ScrollReveal><About /></ScrollReveal>
         <ScrollReveal>
           <SplitSection
-            image="/images/Splitsection.jpeg"
-            imageAlt="Dr. Shabnam and surgical team in operating theatre"
+            image="/images/gallery-01.jpg?v=20260919205610"
+            imageAlt="Doctor consultation at Dr. Shabnam's clinic"
             title="Precision Care for Every Patient"
             variant="cream"
             cta="Book a Consultation"
@@ -42,7 +43,6 @@ function App() {
           </SplitSection>
         </ScrollReveal>
         <ScrollReveal><Gallery /></ScrollReveal>
-        <ScrollReveal><Cases /></ScrollReveal>
         <ScrollReveal><Moments /></ScrollReveal>
         <ScrollReveal><Testimonials /></ScrollReveal>
         <ScrollReveal><News /></ScrollReveal>
